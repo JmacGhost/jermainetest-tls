@@ -16,7 +16,6 @@ function tltest {
 	TIME=`date '+%Y-%m-%d %H:%M:%S'`
 	FILE=`find . -name '*' | sed 's/\.\///g'`
 	IPADDR=`curl -s checkip.amazonaws.com`
-#	MEMORY=`sysctl -a | grep mem |grep -i hw.memsize: | awk '{print $2}'`
 	MEMORY=`top -l 1 | grep PhysMem: | awk '{print $2}'`
 	PID=`echo $$`
 	WHOAMI=`whoami`
